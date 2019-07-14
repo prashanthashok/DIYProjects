@@ -144,7 +144,7 @@ server.listen(3000, '127.0.0.1');
 console.log('Listening on port 3000');
 
 //---------------------//
-//#14 - Creating a read stream//
+//#14-15 - Creating read and write stream//
 //---------------------//
 
 var http = require('http');
@@ -161,3 +161,24 @@ myReadStream.on('data', (chunk) => {
     })
     //console.log(chunk);
 });
+
+//---------------------//
+//#16 - Pipes//
+//---------------------//
+
+var http = require('http');
+var fs = require('fs');
+
+
+//myReadStream.pipe(myWriteStream); //can only be used pipe on readable streams
+
+
+var server = http.createServer((req, res)=>{
+    console.log('request was made: ' + req.url);
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    var myReadStream = fs.createReadStream(__dirname + '/readMe.txt', 'utf8'); //without character encoding, it's going to print the buffer
+    myReadStream.pipe(res);
+});
+
+server.listen(3000, '127.0.0.1');
+console.log('Listening on port 3000');

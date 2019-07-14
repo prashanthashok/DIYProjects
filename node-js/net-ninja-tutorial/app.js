@@ -8,11 +8,11 @@ var app = express();
 app.set('view engine', 'ejs'); //whenever a view is requested, it looks into /views folder
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
+    res.render('index');
 });
 
 app.get('/contact', (req, res) => {
-    res.sendFile(__dirname + '/contact.html');
+    res.render('contact');
 });
 
 

@@ -33,12 +33,13 @@
 </head>
 
 <body>
+    <% include partials/nav.ejs %>
     <h1>Welcome to the profile page of <%= person %></h1>
     <p><strong>Age: </strong><%= data.age%></p>
     <p><strong>Job: </strong><%= data.job%></p>
     <h2>Hobbies</h2>
     <ul> 
-        <% data.hobbies.forEach((hobby) => { %> <!--<%%> to parse JS, <%=%> for outputting data, <%%> can be split over multiple lines!-->
+        <% data.hobbies.forEach((hobby) => { %> 
             <li><%=hobby%></li>
         <% }); %>
     </ul>

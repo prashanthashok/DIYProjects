@@ -1,5 +1,5 @@
 //---------------------//
-//#17 - Serve HTML//
+//#18 - Serve JSON//
 //---------------------//
 
 var http = require('http');
@@ -11,9 +11,14 @@ var fs = require('fs');
 
 var server = http.createServer((req, res)=>{
     console.log('request was made: ' + req.url);
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    var myReadStream = fs.createReadStream(__dirname + '/index.html', 'utf8'); //without character encoding, it's going to print the buffer
-    myReadStream.pipe(res);
+    res.writeHead(200, {'Content-Type': 'application/json'});
+    var myObj = {
+        name: 'Ryu',
+        job: 'Ninja',
+        age: 28
+    };
+    res.end(JSON.stringify(myObj)); //expects a string or a buffer, need to serialize myObj
+
 });
 
 server.listen(3000, '127.0.0.1');

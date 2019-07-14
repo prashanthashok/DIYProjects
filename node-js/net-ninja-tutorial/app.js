@@ -1,10 +1,18 @@
 //---------------------//
-//#20-22 - NPM//
+//#23 - Express//
 //---------------------//
 
+var express = require('express');
 
-//npm init //to initialize package.json
-//npm install <package-name> -save //saves the package as a dependency in package.json
-//npm uninstall //uninstalls package //also removes the package from package.json possible bug?
-//nodemon //Monitors changes in file and automatically restarts the server
-//nodemon app.js //Starts the server and listens for any changes to any files
+var app = express();
+
+app.get('/', (req, res) => {
+    res.send('this is the homepage');
+});
+
+app.get('/contact', (req, res) => {
+    res.send('this is the contact page');
+});
+
+
+app.listen(3000);

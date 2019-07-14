@@ -6,6 +6,12 @@ var express = require('express');
 var app = express();
 
 app.set('view engine', 'ejs'); //whenever a view is requested, it looks into /views folder
+// app.use('/assets', (req, res, next)=>{ //next parameter is used to indicate nodejs to go on to the next middleware
+//     console.log(req.url);                                        //app,get is the next middleware in this case
+//     next();
+// }); //to serve Static files
+
+app.use('/assets', express.static('assets')); // in built function to serve Express static file
 
 app.get('/', (req, res) => {
     res.render('index');

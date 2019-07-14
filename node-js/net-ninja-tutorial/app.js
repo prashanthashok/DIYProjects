@@ -1,20 +1,21 @@
-console.log(__dirname); //global object for dir name
-console.log(__filename); //global object for current filename
+//---------------------//
+//#9 - Reading and Writing Files//
+//---------------------//
 
-//var counter = require('./count') //no need to pass .js at the end
-                        //this is done on the global object
-                        //module.exports returns the counter function to the counter in this file
-                        //counter in app.js is a reference to counter in count.js
+var fs = require('fs'); //convention: generally set variable name the same as the module name
 
-var stuff = require('./stuff');
+var readMe = fs.readFileSync('readMe.txt', 'utf8'); //This is a synchronous method, it is a blocking code, there is an async version as well
+//console.log(readMe);
 
-//ES6 variant => import { counter, adder, pi } from './stuff';
+fs.writeFileSync('writeMe.txt', readMe); //this is also a sync operation
 
-console.log(stuff.counter(['prash','naruto','ryu'])); //this will throw error as counter is not available outside of count.js
-                                                // to fix it, use module.exports
+//----- Async version ----//
 
-console.log(stuff.adder(1,3));
+fs.readFile('readMe.txt', 'utf8', (err, data)=>{
+    //console.log(data);
+    fs.writeFile('writeMe.txt', data,()=>{console.log('Write completed')}) ; //without callback, it writes the file correctly but throws error
+                                                                            // TypeError [ERR_INVALID_CALLBACK]: Callback must be a function
+}); //async version, needs a callback function as the 3rd argument
 
-console.log(`Pi = ${stuff.pi}`);
-console.log(stuff.adder(stuff.pi,8));
 
+console.log('test');

@@ -1,5 +1,5 @@
 //---------------------//
-//#24-25 - Express - Templating Engines//
+//#29 - Query strings //
 //---------------------//
 
 var express = require('express');
@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/contact', (req, res) => {
-    res.render('contact');
+    res.render('contact', {qs: req.query});
 });
 
 

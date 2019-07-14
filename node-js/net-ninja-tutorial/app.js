@@ -1,4 +1,14 @@
 //---------------------//
-//#11 - Clients and Server//
+//#12 - Creating a Server//
 //---------------------//
 
+var http = require('http');
+
+var server = http.createServer((req, res)=>{
+    console.log('request was made: ' + req.url);
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('Hey ninjas');
+});
+
+server.listen(3000, '127.0.0.1');
+console.log('Listening on port 3000');

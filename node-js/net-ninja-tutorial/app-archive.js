@@ -56,3 +56,74 @@ var Person = function(name) { //ES6 ()=> is throwing error: TypeError: Object.se
  nina.emit('speak', 'R is fun! Yey');
  fizzy.emit('speak', 'buuuuuurp!');
 
+//---------------------//
+//#9 - Reading and Writing Files//
+//---------------------//
+
+var fs = require('fs'); //convention: generally set variable name the same as the module name
+
+var readMe = fs.readFileSync('readMe.txt', 'utf8'); //This is a synchronous method, it is a blocking code, there is an async version as well
+//console.log(readMe);
+
+fs.writeFileSync('writeMe.txt', readMe); //this is also a sync operation
+
+//----- Async version ----//
+
+fs.readFile('readMe.txt', 'utf8', (err, data)=>{
+    //console.log(data);
+    fs.writeFile('writeMe.txt', data,()=>{console.log('Write completed')}) ; //without callback, it writes the file correctly but throws error
+                                                                            // TypeError [ERR_INVALID_CALLBACK]: Callback must be a function
+}); //async version, needs a callback function as the 3rd argument
+
+fs.unlink('writeMe.txt', (err) => { //without a callback throws error TypeError [ERR_INVALID_CALLBACK]: Callback must be a function
+    if(err) console.log(`Error occurred ${err}`);
+    else console.log('File successfully deleted');
+});
+
+console.log('test');
+
+
+//---------------------//
+//#10 - Creating and Removing Directories//
+//---------------------//
+
+var fs = require('fs');
+
+//Sync methods
+
+//fs.mkdirSync('stuff'); //thorws error if dir does not exist
+
+//fs.rmdirSync('stuff');
+
+//Async methods
+
+// fs.mkdir('stuff', (err) =>{
+//     if(err) console.log(`Error occurred ${err}`);
+//     else{
+//         fs.readFile('readMe.txt', 'utf8', (err, data) =>{
+//             if(err) console.log(`Error occurred ${err}`);
+//             else{
+//                 fs.writeFile('./stuff/WriteMe.txt', data, (err) => {
+//                     if(err) console.log(`Error occurred ${err}`);
+//                     else{
+//                         console.log('File write successful');
+//                     }
+//                 })
+//             }
+//         })
+//     }
+// } );
+
+
+fs.unlink('./stuff/WriteMe.txt', (err) => {
+    if (err) console.log(`Error occurred ${err}`)
+    else {
+        fs.rmdir('stuff', (err) => { //can't remove a directory without it being empty
+            if (err) console.log(`Error occurred ${err}`)
+            else console.log('directory removed');
+            }
+        );
+    }
+});
+
+console.log('Async test');

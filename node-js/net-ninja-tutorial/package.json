@@ -1,0 +1,29 @@
+{
+  "name": "net-ninja-tutorial",
+  "version": "1.0.0",
+  "description": "a little test app",
+  "main": "app.js",
+  "dependencies": {
+    "body-parse": "^0.1.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prashanthashok/DIYProjects.git"
+  },
+  "keywords": [
+    "fun",
+    "ninjas"
+  ],
+  "author": "ashokram",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prashanthashok/DIYProjects/issues"
+  },
+  "homepage": "https://github.com/prashanthashok/DIYProjects#readme"
+}

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LinkedList
+namespace AlgorithmsInCSharp
 {
     class MainClass
     {

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{CAA96E89-D1B4-4188-939F-BB3CB9A63165}</ProjectGuid>
+    <ProjectGuid>{383ADAF1-18A8-4A6A-BE0B-7E71EEBE846E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>LinkedList</RootNamespace>
     <AssemblyName>LinkedList</AssemblyName>
@@ -34,8 +34,8 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="LinkedListNode.cs" />
-    <Compile Include="LinkedList.cs" />
+    <Compile Include="Node.cs" />
+    <Compile Include="SinglyLinkedList.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -33,3 +33,5 @@ var romanToInt = function(s) {
   }
   return intNum;
 };
+
+module.exports = romanToInt;

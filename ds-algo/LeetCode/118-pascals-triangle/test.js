@@ -1,3 +1,3 @@
 const generate = require("./index");
 
-const result = generate(5);
+const result = generate(1);

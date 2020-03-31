@@ -3,7 +3,6 @@
  * @return {number[][]}
  */
 var generate = function(numRows) {
-  debugger;
   if (numRows == 0) return [];
   if (numRows == 1) return [1];
   if (numRows == 2) return [[1], [1, 1]];

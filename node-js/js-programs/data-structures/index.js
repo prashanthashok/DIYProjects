@@ -59,6 +59,36 @@ function dfsTraversal(g, source) {
   return result;
 }
 
+function detectCycle(g) {
+  let numVertices = g.vertices;
+  let visited = Array(numVertices).fill(false);
+  let recursion = Array(numVertices).fill(false);
+
+  for (let i = 0; i < numVertices; i++) {
+    if (isCyclic(g, i, visited, recursion)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function isCyclic(g, data, visited, recursion) {
+  if (recursion[data]) return true;
+  if (visited[data]) return false;
+
+  visited[data] = true;
+  recursion[data] = true;
+
+  let adjacents = g.list[data].getHead();
+  while (adjacents != null) {
+    if (isCyclic(g, adjacents.data, visited, recursion)) return true;
+    adjacents = adjacents.nextElement;
+  }
+
+  recursion[data] = false;
+  return false;
+}
+
 let g1 = new Graph(6);
 g1.addEdge(1, 2);
 g1.addEdge(1, 3);
@@ -74,3 +104,13 @@ g.addEdge(0, 2);
 g.addEdge(1, 3);
 g.addEdge(1, 4);
 console.log(dfsTraversal(g, 0)); //Should output 01342
+
+let g2 = new Graph(6);
+g2.addEdge(0, 1);
+g2.addEdge(1, 2);
+g2.addEdge(3, 4);
+g2.addEdge(4, 5);
+
+console.log(detectCycle(g2));
+g2.addEdge(5, 3);
+console.log(detectCycle(g2));

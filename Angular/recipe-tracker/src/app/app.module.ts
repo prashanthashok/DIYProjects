@@ -6,13 +6,16 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingListEditComponent } from './shopping-list/shopping-list-edit/shopping-list-edit.component';
-import { RecipeListComponent } from './recipe-book/recipe-list/recipe-list.component';
-import { RecipeItemComponent } from './recipe-book/recipe-list/recipe-item/recipe-item.component';
-import { RecipeDetailComponent } from './recipe-book/recipe-detail/recipe-detail.component';
-import { RecipesComponent } from './recipe-book/recipes.component';
+import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
+import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
+import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
+import { RecipesComponent } from './recipes/recipes.component';
 import { DropDownDirective } from './shared/dropdown.directive';
-import { RecipeService } from './recipe-book/recipe.service';
+import { RecipeService } from './recipes/recipe.service';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
+import { AppRoutingModule } from './app-routing.module';
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +27,14 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
     RecipeItemComponent,
     RecipeDetailComponent,
     RecipesComponent,
-    DropDownDirective
+    DropDownDirective,
+    RecipeStartComponent,
+    RecipeEditComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]

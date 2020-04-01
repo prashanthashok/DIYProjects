@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "lib": ["es2016", "es5", "es6", "dom"],
+    "target": "es2016",
+    "outDir": "lib"
+  },
+  "include": ["src"]
+}

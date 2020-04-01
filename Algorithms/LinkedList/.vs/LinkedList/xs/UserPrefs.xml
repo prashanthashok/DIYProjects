@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{CAA96E89-D1B4-4188-939F-BB3CB9A63165}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LinkedList.cs">
+    <Files>
+      <File FileName="Program.cs" Line="13" Column="1" />
+      <File FileName="LinkedListNode.cs" Line="10" Column="9" />
+      <File FileName="LinkedList.cs" Line="23" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.LinkedList PreferredExecutionTarget="MonoDevelop.Default" FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

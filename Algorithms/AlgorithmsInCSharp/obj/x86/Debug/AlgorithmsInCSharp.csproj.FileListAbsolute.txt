@@ -1,0 +1,6 @@
+/Users/prashanth/Development/Apps/DIYProjects/Algorithms/AlgorithmsInCSharp/bin/Debug/AlgorithmsInCSharp.exe
+/Users/prashanth/Development/Apps/DIYProjects/Algorithms/AlgorithmsInCSharp/bin/Debug/AlgorithmsInCSharp.pdb
+/Users/prashanth/Development/Apps/DIYProjects/Algorithms/AlgorithmsInCSharp/obj/x86/Debug/AlgorithmsInCSharp.csprojAssemblyReference.cache
+/Users/prashanth/Development/Apps/DIYProjects/Algorithms/AlgorithmsInCSharp/obj/x86/Debug/AlgorithmsInCSharp.csproj.CoreCompileInputs.cache
+/Users/prashanth/Development/Apps/DIYProjects/Algorithms/AlgorithmsInCSharp/obj/x86/Debug/AlgorithmsInCSharp.exe
+/Users/prashanth/Development/Apps/DIYProjects/Algorithms/AlgorithmsInCSharp/obj/x86/Debug/AlgorithmsInCSharp.pdb

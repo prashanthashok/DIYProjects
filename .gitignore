@@ -1,3 +1,8 @@
 node_modules
 .vscode
+Algorithms/LinkedList/.vs/LinkedList/xs/sqlite3/storage.ide
+Algorithms/LinkedList/.vs/LinkedList/xs/sqlite3/db.lock
+Algorithms/LinkedList/.vs/LinkedList/xs/sqlite3/storage.ide-shm
+Algorithms/LinkedList/.vs/LinkedList/xs/sqlite3/storage.ide-wal
+Algorithms/LinkedList/obj/x86/Debug/LinkedList.csprojAssemblyReference.cache
 
